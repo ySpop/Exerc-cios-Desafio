@@ -36,7 +36,13 @@
 </head>
 <body>
 
-    <input type="text" placeholder="">
+    <input id="input" type="number" placeholder="Digite quantos litros">
+    <button id="btnCalculo" onclick="calcular()">CALCULAR</button>
+    <button id="btnG" onclick="Gasolina()">GASOLINA</button>
+    <button id="btnA" onclick="Alcool()">ÁLCOOL</button>
+
+    <h4 id="TypeSelector" style="font-weight: 300;"></h4>
+    <h4 id="result" style="font-weight: 400;"></h4>
 
     <script>
 
@@ -46,6 +52,37 @@
     var A_álcool = 4.90
     var G_gasolina = 5.30
 
+    var TypeSelector = document.getElementById('TypeSelector');
+    var result = document.getElementById('result');
+    var input = document.getElementById('input').value;
+
+    function Alcool () {
+        let input = document.getElementById('input').value;
+        let Gasolina = document.getElementById('btnG');
+        let Alcool = document.getElementById('btnA');
+        TypeSelector.innerHTML = "Álcool foi selecionado.";
+        result.innerHTML = "";
+
+        function calcular () {
+        if (input <= 20) {
+            result.innerHTML = "Quantidade menor ou igual a 20 litros !";
+        } else {
+
+        }}
+
+        Gasolina.style.display = "none";
+        Alcool.style.display = "none";
+    } 
+
+    function Gasolina () {
+        let Gasolina = document.getElementById('btnG');
+        let Alcool = document.getElementById('btnA');
+        TypeSelector.innerHTML = "Gasolina foi selecionado.";
+        result.innerHTML = "";
+        
+        Gasolina.style.display = "none";
+        Alcool.style.display = "none";
+    }
     
     </script>
     

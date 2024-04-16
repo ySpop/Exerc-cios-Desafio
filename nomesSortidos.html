@@ -38,14 +38,14 @@
    }  
 
    function search() {
-  const resultadoBusca = document.getElementsByTagName("h2");
-  const BuscarNome = document.getElementById("BuscarNome").value;
-  const inputNome = document.getElementById("inputNome").value;
+     const BuscarNome = document.getElementById("BuscarNome").value;
+     const resultadoBusca = document.getElementsByTagName("h2");
+     const inputNome = document.getElementById("inputNome").value;
 
   // Resetar o conteúdo de todos os elementos h2
-  for (let i = 0; i < resultadoBusca.length; i++) {
-    resultadoBusca[i].textContent = "";
-  }
+      for (let i = 0; i < resultadoBusca.length; i++) {
+        resultadoBusca[i].textContent = "";
+      }
 
   // Realizar a busca
   for (let i = 0; i < resultadoBusca.length; i++) {
